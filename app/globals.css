@@ -2,32 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.scrollbar-none {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.scrollbar-none::-webkit-scrollbar {
+  width: 0;
+  height: 0; /* Chrome, Safari, Opera */
+}
+body{
+  overflow-x: hidden;
+ 
+}
+
+@layer utilities
+{
+  .links
+    {
+      @apply text-[16px] max-md:hidden
+    }
+    .side
+    {
+      @apply absolute top-0 flex flex-col h-[100vh] w-[50%] justify-center items-center space-y-12  md:hidden bg-[#172554] text-white
+    }
+    .not-active
+    {
+      @apply right-[-320px]
+    }
+    .tran
+    {
+      transition: all 1s ease;
+    }
+    .border-radius
+    {
+      border-radius: 20px;
+    }
+    .trailer-border
+  {
+    border-radius: 10px;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .drop-menus
+  {
+    @apply text-[18px] text-blue-400 hover:text-blue-800 transition-all
   }
-}
+  .inputs{
+    @apply px-3 py-2 border-[1px] border-slate-400 w-[100%] text-black
+  }
+  }
