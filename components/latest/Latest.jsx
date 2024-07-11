@@ -22,7 +22,7 @@ const Latest =async () => {
        <div className='w-[5%]'></div>
      </div>
      <div className='flex items-center gap-10'>
-     <h1 className='text-xl font-bold'>What's Popular</h1>
+     <h1 className='text-xl font-bold'>What is Popular</h1>
    
     </div>
     <div className='mt-4 flex gap-1'>
