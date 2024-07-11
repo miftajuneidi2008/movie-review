@@ -4,10 +4,9 @@ import Image from 'next/image'
 import Link from 'next/link';
 import React from 'react'
 import { FaHeart,FaBookmark,FaPlay } from "react-icons/fa";
-const key='aaab5bc040d37da67980854ff1f22c60'
 const MovieDetails = async({params}) => {
   
-    const data =await fetch(`https://api.themoviedb.org/3/movie/${params.id}?api_key=${key}`)
+    const data =await fetch(`https://api.themoviedb.org/3/movie/${params.id}?api_key=${process.env.NEXT_PUBLIC_API_KEY}`)
     const nedata = await data.json()
     
   
