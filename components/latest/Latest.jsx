@@ -1,8 +1,8 @@
 
 import React from 'react'
-import Trending from '../card/Trending'
-import Trailer from '../trailer/Trailer'
-import { popular, recent } from '../data/data';
+import Trending from "../card/Trending"
+import Trailer from "../trailer/Trailer"
+import { popular, recent } from "../data/data";
 
 const Latest =async () => {
   const pupular =await  popular();
