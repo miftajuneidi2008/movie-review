@@ -13,8 +13,8 @@ const MovieDetails = async({params}) => {
   return (
     <div className='w-full h-[80vh] text-white'>
         <div className='relative w-full h-full mb-4'>
-            <div className='absolute w-full h-[80vh]  inset-0 bg-slate-700 opacity-90 '> </div>
-            <Image src={`https://image.tmdb.org/t/p/original/${nedata?.backdrop_path}`} alt={nedata?.title} width={600} height={600} className="w-full h-[550px] brightness-10 opacity-100"/>
+            <div className='absolute w-full h-full  inset-0 bg-slate-700 opacity-90 '> </div>
+            <Image src={`https://image.tmdb.org/t/p/original/${nedata?.backdrop_path}`} alt={nedata?.title} width={600} height={600} className="w-full h-full brightness-10 opacity-100"/>
             <div className="absolute flex max-md:flex-col max-md:min-h-screen gap-4 top-[20%] w-full p-4 md:p-8">
             <Image src={`https://image.tmdb.org/t/p/original/${nedata?.backdrop_path}`} alt={nedata?.title} width={600} height={600} className='h-[70%]'/>
              <div className='flex flex-col gap-5'>
@@ -35,9 +35,8 @@ const MovieDetails = async({params}) => {
                 <FaPlay/>
               </Link>
               
-
              </div>
-             <div className='flex flex-col gap-2'>
+             <div className='flex flex-col gap-2 max-md:hidden'>
                 <p>Overview</p>
                 <p>{nedata.overview}</p>
              </div>

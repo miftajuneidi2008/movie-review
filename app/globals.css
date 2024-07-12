@@ -12,6 +12,7 @@
   height: 0; /* Chrome, Safari, Opera */
 }
 body{
+  width: 100%;
   overflow-x: hidden;
  
 }
@@ -28,7 +29,7 @@ body{
     }
     .not-active
     {
-      @apply right-[-320px]
+      @apply right-[-100%]
     }
     .tran
     {
